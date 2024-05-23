@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ botvalue: 31, bugvalue: 31, heavy : 0, dmgtype : 'util', name: 'Orbital Smoke Strike', type: 'Bridge', enabled: true, imgSrc: 'assets/Bridge/Orbital Smoke Strike.svg', category: 'bridge' },
 		{ botvalue: 5, bugvalue: 5, heavy : 0, dmgtype : 'none', name: 'Shield Generator Relay', type: 'Other', enabled: true, imgSrc: 'assets/Bridge/Shield Generator Relay.svg', category: 'bridge' },
 		{ botvalue: 1, bugvalue: 50, heavy : 0, dmgtype : 'aoe', name: 'Tesla Tower', type: 'Bridge', enabled: true, imgSrc: 'assets/Bridge/Tesla Tower.svg', category: 'bridge' },
-		{ botvalue: 10, bugvalue: 10, heavy : 0, dmgtype : 'aoe', name: 'Anti-Personnel Minefield', type: 'Engineering Bay', enabled: true, imgSrc: 'assets/Engineering Bay/Anti-Personnel Minefield.svg', category: 'engineering-bay' },
-		{ botvalue: 0, bugvalue: 0, heavy : 1, dmgtype : 'aoe', name: 'Anti-Tank Mines', type: 'Engineering Bay', enabled: false, imgSrc: 'assets/Engineering Bay/Anti-Tank Mines.svg', category: 'engineering-bay' },
+		{ botvalue: 10, bugvalue: 10, heavy : 0, dmgtype : 'util', name: 'Anti-Personnel Minefield', type: 'Engineering Bay', enabled: true, imgSrc: 'assets/Engineering Bay/Anti-Personnel Minefield.svg', category: 'engineering-bay' },
+		{ botvalue: 0, bugvalue: 0, heavy : 1, dmgtype : 'util', name: 'Anti-Tank Mines', type: 'Engineering Bay', enabled: false, imgSrc: 'assets/Engineering Bay/Anti-Tank Mines.svg', category: 'engineering-bay' },
 		{ botvalue: 40, bugvalue: 90, heavy : 0, dmgtype : 'aoe', hasBackpack: 0, name: 'Arc Thrower', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Arc Thrower.svg', category: 'engineering-bay' },
-		{ botvalue: 20, bugvalue: 0, heavy : 0, dmgtype : 'none', name: 'Ballistic Shield Backpack', type: 'Backpack', enabled: true, imgSrc: 'assets/Engineering Bay/Ballistic Shield Backpack.svg', category: 'engineering-bay' },
-		{ botvalue: 50, bugvalue: 50, heavy : 0, dmgtype : 'aoe', hasBackpack: 0, name: 'Grenade Launcher', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Grenade Launcher.svg', category: 'engineering-bay' },
+		{ botvalue: 10, bugvalue: 0, heavy : 0, dmgtype : 'none', name: 'Ballistic Shield Backpack', type: 'Backpack', enabled: true, imgSrc: 'assets/Engineering Bay/Ballistic Shield Backpack.svg', category: 'engineering-bay' },
+		{ botvalue: 60, bugvalue: 50, heavy : 0, dmgtype : 'aoe', hasBackpack: 0, name: 'Grenade Launcher', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Grenade Launcher.svg', category: 'engineering-bay' },
 		{ botvalue: 25, bugvalue: 60, heavy : 0, dmgtype : 'single', name: 'Guard Dog Rover', type: 'Backpack', enabled: true, imgSrc: 'assets/Engineering Bay/Guard Dog Rover.svg', category: 'engineering-bay' },
-		{ botvalue: 10, bugvalue: 15, heavy : 0, dmgtype : 'aoe', name: 'Incendiary Mines', type: 'Engineering Bay', enabled: true, imgSrc: 'assets/Engineering Bay/Incendiary Mines.svg', category: 'engineering-bay' },
+		{ botvalue: 10, bugvalue: 15, heavy : 0, dmgtype : 'util', name: 'Incendiary Mines', type: 'Engineering Bay', enabled: true, imgSrc: 'assets/Engineering Bay/Incendiary Mines.svg', category: 'engineering-bay' },
 		{ botvalue: 60, bugvalue: 30, heavy : 0, dmgtype : 'single', hasBackpack: 0, name: 'Laser Cannon', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Laser Cannon.svg', category: 'engineering-bay' },
 		{ botvalue: 80, bugvalue: 90, heavy : 1, dmgtype : 'single', hasBackpack: 0, name: 'Quasar Cannon', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Quasar Cannon.svg', category: 'engineering-bay' },
 		{ botvalue: 85, bugvalue: 90, heavy : 0, dmgtype : 'none', name: 'Shield Generator Pack', type: 'Backpack', enabled: true, imgSrc: 'assets/Engineering Bay/Shield Generator Pack.svg', category: 'engineering-bay' },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ botvalue: 15, bugvalue: 15, heavy : 0, dmgtype : 'aoe', name: 'Orbital Airburst Strike', type: 'Orbital Cannons', enabled: true, imgSrc: 'assets/Orbital Cannons/Orbital Airburst Strike.svg', category: 'orbital-cannons' },
 		{ botvalue: 20, bugvalue: 35, heavy : 0, dmgtype : 'aoe', name: 'Orbital Gatling Barrage', type: 'Orbital Cannons', enabled: true, imgSrc: 'assets/Orbital Cannons/Orbital Gatling Barrage.svg', category: 'orbital-cannons' },
 		{ botvalue: 95, bugvalue: 95, heavy : 1, dmgtype : 'single', name: 'Orbital Laser', type: 'Orbital Cannons', enabled: true, imgSrc: 'assets/Orbital Cannons/Orbital Laser.svg', category: 'orbital-cannons' },
-		{ botvalue: 85, bugvalue: 95, heavy : 1, dmgtype : 'single', name: 'Orbital Railcannon Strike', type: 'Orbital Cannons', enabled: true, imgSrc: 'assets/Orbital Cannons/Orbital Railcannon Strike.svg', category: 'orbital-cannons' },
+		{ botvalue: 75, bugvalue: 95, heavy : 1, dmgtype : 'single', name: 'Orbital Railcannon Strike', type: 'Orbital Cannons', enabled: true, imgSrc: 'assets/Orbital Cannons/Orbital Railcannon Strike.svg', category: 'orbital-cannons' },
 		{ botvalue: 30, bugvalue: 15, heavy : 0, dmgtype : 'aoe', name: 'Orbital Walking Barrage', type: 'Orbital Cannons', enabled: true, imgSrc: 'assets/Orbital Cannons/Orbital Walking Barrage.svg', category: 'orbital-cannons' },
 		{ botvalue: 25, bugvalue: 30, heavy : 0, dmgtype : 'aoe', hasBackpack: 1, name: 'Airburst Rocket Launcher', type: 'Weapon', enabled: true, imgSrc: 'assets/Patriotic Administration Center/Airburst Rocket Launcher.svg', category: 'administration' },
 		{ botvalue: 100, bugvalue: 30, heavy : 0, dmgtype : 'single', hasBackpack: 0, name: 'Anti-Materiel Rifle', type: 'Weapon', enabled: true, imgSrc: 'assets/Patriotic Administration Center/Anti-Materiel Rifle.svg', category: 'administration' },
@@ -53,14 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ botvalue: 55, bugvalue: 35, heavy : 0, dmgtype : 'single', name: 'Guard Dog', type: 'Backpack', enabled: true, imgSrc: 'assets/Robotics Workshop/Guard Dog.svg', category: 'workshop' },
 		{ botvalue: 0, bugvalue: 5, heavy : 0, dmgtype : 'single', name: 'Machine Gun Sentry', type: 'Tower', enabled: false, imgSrc: 'assets/Robotics Workshop/Machine Gun Sentry.svg', category: 'workshop' },
 		{ botvalue: 80, bugvalue: 50, heavy : 0, dmgtype : 'aoe', name: 'Mortar Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Mortar Sentry.svg', category: 'workshop' },
-		{ botvalue: 60, bugvalue: 30, heavy : 1, dmgtype : 'single', name: 'Patriot Exosuit', type: 'Other', enabled: true, imgSrc: 'assets/Robotics Workshop/Patriot Exosuit.svg', category: 'workshop' },
-		{ botvalue: 35, bugvalue: 35, heavy : 1, dmgtype : 'single', name: 'Rocket Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Rocket Sentry.svg', category: 'workshop' },
+		{ botvalue: 35, bugvalue: 25, heavy : 1, dmgtype : 'single', name: 'Patriot Exosuit', type: 'Other', enabled: true, imgSrc: 'assets/Robotics Workshop/Patriot Exosuit.svg', category: 'workshop' },
+		{ botvalue: 30, bugvalue: 30, heavy : 1, dmgtype : 'single', name: 'Rocket Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Rocket Sentry.svg', category: 'workshop' },
     ];
     
     const stratagemList = document.getElementById('stratagems');
     const randomizeButton = document.getElementById('randomizeButton');
     const loadoutDisplay = document.getElementById('loadoutDisplay');
     const categories = ['bridge', 'engineering-bay', 'hangar', 'orbital-cannons', 'workshop', 'administration'];
+    const enemyTypeSelect = document.getElementById('enemyType');
+    const bodyElement = document.body;
     
     // Function to render the stratagem list
     function renderStratagemList() {
@@ -69,10 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
             categoryElement.innerHTML = '';
             stratagems.filter(strat => strat.category === category).forEach((strat, index) => {
                 const li = document.createElement('li');
-                li.innerHTML = `<label>
-                    <input type="checkbox" data-index="${index}" ${strat.enabled ? 'checked' : ''}>
-                    <img src="${strat.imgSrc}" alt="${strat.name}"> ${strat.name} (${strat.type})
-                </label>`;
+                li.classList.toggle('selected', strat.enabled);
+                li.innerHTML = `<img src="${strat.imgSrc}" alt="${strat.name}"> ${strat.name}`; //  (${strat.type})
+                li.addEventListener('click', () => {
+                    strat.enabled = !strat.enabled;
+                    li.classList.toggle('selected', strat.enabled);
+                });
                 categoryElement.appendChild(li);
             });
         });
@@ -102,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const maxWeapons = parseInt(document.getElementById('maxWeapons').value, 10);
             const maxBackpacks = parseInt(document.getElementById('maxBackpacks').value, 10);
             const fairnessScale = parseInt(document.getElementById('fairnessScale').value, 10);
+            const stratagemsToRoll = parseInt(document.getElementById('stratagemCount').value, 10);
 
             let loadout = [];
 
@@ -134,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         
             // Randomly add remaining stratagems to the loadout
-            while (loadout.length < 4 && remainingStratagems.length > 0) {
+            while (loadout.length < stratagemsToRoll && remainingStratagems.length > 0) {
                 weaponCount = loadout.filter(s => s.type === 'Weapon').length;
                 backpackCount = loadout.filter(s => s.type === 'Backpack').length + loadout.filter(s => s.hasBackpack === 1).length;
                 const randomIndex = Math.floor(Math.random() * remainingStratagems.length);
@@ -163,10 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if(fairnessScale > 40 && (loadout.filter(s => s.heavy === 1).length < 1 || loadout.filter(s => s.dmgtype === 'aoe').length < 1)){
                 ; //reroll
             }
-            else if(document.getElementById('enemyType').value === 'bugs' && bugsum < (4*fairnessScale - 50)){
+            else if(document.getElementById('enemyType').value === 'bugs' && bugsum < (stratagemsToRoll*0.9*fairnessScale-10)){
                 ; //reroll
             }
-            else if(document.getElementById('enemyType').value === 'bots' && botsum < (4*fairnessScale - 50)){
+            else if(document.getElementById('enemyType').value === 'bots' && botsum < (stratagemsToRoll*0.9*fairnessScale-10)){
                 ; //reroll
             }
             else{
@@ -178,15 +183,33 @@ document.addEventListener('DOMContentLoaded', () => {
         //a better way would be to favor stratagems that are close to the fainess value and update the goal(fairness) after each choise
         //-> if the first was bad favor better next
         return loadout;
+    }    
+
+    // Function to update background image
+    function updateBackgroundImage() {
+        const enemyType = enemyTypeSelect.value;
+        //disabled because I dont know what I want displayed
+        if (enemyType === 'bots' && false) {
+            bodyElement.style.backgroundImage = "url('assets/backgrounds/bots.jpg')";
+        } else if (enemyType === 'bugs' && false) {
+            bodyElement.style.backgroundImage = "url('assets/backgrounds/bugs.jpg')";
+        }
+        else{
+            //default background
+            bodyElement.style.backgroundImage = "url('assets/backgrounds/default.png')";
+        }
     }
-    
+
     randomizeButton.addEventListener('click', () => {
         const loadout = getRandomLoadout();
         loadoutDisplay.innerHTML = loadout.map(s => `<img src="${s.imgSrc}" alt="${s.name}" title="${s.name}">`).join('');
     });
     
+    enemyType.addEventListener('change', updateBackgroundImage);
+
     // Initial render
-    renderStratagemList();
+    renderStratagemList();    
+    updateBackgroundImage();
     
     // Collapsible sections logic
     document.querySelectorAll('.collapsible').forEach(button => {

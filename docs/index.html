@@ -10,6 +10,7 @@
     <div class="container">
         <h1>Helldivers 2 Loadout Randomizer</h1>
         
+        
         <button id="randomizeButton">Randomize Loadout</button>
         
         <div class="loadout">
@@ -27,11 +28,11 @@
                 </select>
                 
                 <div class="toggles">
-                    <label for="guaranteedWeapon" style="word-wrap:break-word">
-                        <input type="checkbox" id="guaranteedWeapon" value="guaranteedWeapon"> Guaranteed Weapon
+                    <label>
+                        <input type="checkbox" id="guaranteedWeapon"> Guaranteed Weapon
                     </label>
-                    <label for="guaranteedBackpack" style="word-wrap:break-word">
-                        <input type="checkbox" id="guaranteedBackpack" value="guaranteedBackpack"> Guaranteed Backpack
+                    <label>
+                        <input type="checkbox" id="guaranteedBackpack"> Guaranteed Backpack
                     </label>
                     <label>
                         Maximum Weapons: <input type="number" id="maxWeapons" min="0" max="4" value="1">
@@ -40,7 +41,14 @@
                         Maximum Backpacks: <input type="number" id="maxBackpacks" min="0" max="4" value="1">
                     </label>
                     <label>
-                        Fairness Scale: <input type="range" id="fairnessScale" min="0" max="100" value="50">
+                        Available Stratagems: <input type="number" id="stratagemCount" min="2" max="6" value="4">
+                    </label>
+                    <label>
+                        Fairness Scale:                                             
+                        <span class="tooltip">?
+                            <span class="tooltiptext">Adjust the balance of loadout randomness. 0 means completely random, 100 means generally very good stratagems for the choosen enemy type.</span>
+                        </span>
+                        <input type="range" id="fairnessScale" min="0" max="100" value="50">
                     </label>
                 </div>
             </div>
@@ -48,32 +56,33 @@
         
         <div class="stratagem-list">
             <h2>Available Stratagems</h2>
-            <button class="collapsible">Bridge</button>
-            <div class="content" id="bridge">
-                <ul></ul>
-            </div>
-            <button class="collapsible">Engineering Bay</button>
-            <div class="content" id="engineering-bay">
-                <ul></ul>
-            </div>
-            <button class="collapsible">Hangar</button>
-            <div class="content" id="hangar">
-                <ul></ul>
-            </div>
-            <button class="collapsible">Orbital Cannons</button>
-            <div class="content" id="orbital-cannons">
-                <ul></ul>
-            </div>
-            <button class="collapsible">Workshop</button>
-            <div class="content" id="workshop">
-                <ul></ul>
-            </div>
-            <button class="collapsible">Administration</button>
-            <div class="content" id="administration">
-                <ul></ul>
+            <div class="columns">
+                <div class="column" id="bridge">
+                    <h3>Bridge</h3>
+                    <ul></ul>
+                </div>
+                <div class="column" id="engineering-bay">
+                    <h3>Engineering Bay</h3>
+                    <ul></ul>
+                </div>
+                <div class="column" id="hangar">
+                    <h3>Hangar</h3>
+                    <ul></ul>
+                </div>
+                <div class="column" id="orbital-cannons">
+                    <h3>Orbital Cannons</h3>
+                    <ul></ul>
+                </div>
+                <div class="column" id="workshop">
+                    <h3>Workshop</h3>
+                    <ul></ul>
+                </div>
+                <div class="column" id="administration">
+                    <h3>Administration</h3>
+                    <ul></ul>
+                </div>
             </div>
         </div>
-        
     </div>
     
     <script src="app.js"></script>
