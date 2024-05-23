@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else{
             //default background
-            bodyElement.style.backgroundImage = "url('assets/backgrounds/default.png')";
+            ;//bodyElement.style.backgroundImage = "url('assets/backgrounds/default.png')";
         }
     }
 
