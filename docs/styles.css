@@ -26,7 +26,7 @@ h1, h2 {
 
 /* Settings and Toggles */
 .settings, .stratagem-management, .loadout {
-    margin: 20px 0;
+    margin: 20px 0;    
 }
 
 .toggles label, .toggles input {
@@ -115,6 +115,7 @@ button:hover {
     overflow: hidden;
     background-color: #1a1a1a; /* Same as body background */
     margin-bottom: 10px;
+    padding-top: 18px;
 }
 
 /* Tabs */

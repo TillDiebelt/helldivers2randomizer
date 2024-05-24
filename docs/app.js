@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ botvalue: 55, bugvalue: 65, heavy : 0, selected : false, dmgtype : 'single', hasBackpack: 0, name: 'Stalwart', type: 'Weapon', enabled: true, imgSrc: 'assets/Patriotic Administration Center/Stalwart.svg', category: 'administration' },
 		{ botvalue: 75, bugvalue: 75, heavy : 1, selected : false, dmgtype : 'single', name: 'Autocannon Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Autocannon Sentry.svg', category: 'workshop' },
 		{ botvalue: 75, bugvalue: 75, heavy : 0, selected : false, dmgtype : 'util', name: 'EMS Mortar Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/EMS Mortar Sentry.svg', category: 'workshop' },
-		{ botvalue: 30, bugvalue: 80, heavy : 0, selected : false, dmgtype : 'aoe', name: 'Gatling Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Gatling Sentry.svg', category: 'workshop' },
+		{ botvalue: 50, bugvalue: 85, heavy : 0, selected : false, dmgtype : 'aoe', name: 'Gatling Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Gatling Sentry.svg', category: 'workshop' },
 		{ botvalue: 55, bugvalue: 35, heavy : 0, selected : false, dmgtype : 'single', name: 'Guard Dog', type: 'Backpack', enabled: true, imgSrc: 'assets/Robotics Workshop/Guard Dog.svg', category: 'workshop' },
 		{ botvalue: 0, bugvalue: 5, heavy : 0, selected : false, dmgtype : 'single', name: 'Machine Gun Sentry', type: 'Tower', enabled: false, imgSrc: 'assets/Robotics Workshop/Machine Gun Sentry.svg', category: 'workshop' },
 		{ botvalue: 80, bugvalue: 50, heavy : 0, selected : false, dmgtype : 'aoe', name: 'Mortar Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Mortar Sentry.svg', category: 'workshop' },
@@ -230,6 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
             else if(document.getElementById('enemyType').value === 'bots' && (botsum+fairnessoffset) < (stratagemsToRoll*0.85*fairnessScale)){
                 ; //reroll
             }
+            //yikes:
+            else if(tries === 4999){
+                return loadout;
+            }
             else{
                 return loadout;
             }
@@ -238,10 +242,10 @@ document.addEventListener('DOMContentLoaded', () => {
         //dont care currently about a smarter algorithm that does not need to reroll
         //a better way would be to favor stratagems that are close to the fainess value and update the goal(fairness) after each choise
         //-> if the first was bad favor better next
-        return loadout;
+        return []; //<-- why do I exist ಥ_ಥ
     }    
 
-    // Function to update background image
+    // Function to update background image from nothing to nothing
     function updateBackgroundImage() {
         const enemyType = enemyTypeSelect.value;
         //disabled because I dont know what I want displayed
