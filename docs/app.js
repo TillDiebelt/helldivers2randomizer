@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ botvalue: 60, bugvalue: 50, heavy : 0, selected : false, dmgtype : 'aoe', hasBackpack: 0, name: 'Grenade Launcher', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Grenade Launcher.svg', category: 'engineering-bay' },
 		{ botvalue: 25, bugvalue: 60, heavy : 0, selected : false, dmgtype : 'single', name: 'Guard Dog Rover', type: 'Backpack', enabled: true, imgSrc: 'assets/Engineering Bay/Guard Dog Rover.svg', category: 'engineering-bay' },
 		{ botvalue: 10, bugvalue: 15, heavy : 0, selected : false, dmgtype : 'util', name: 'Incendiary Mines', type: 'Engineering Bay', enabled: true, imgSrc: 'assets/Engineering Bay/Incendiary Mines.svg', category: 'engineering-bay' },
-		{ botvalue: 60, bugvalue: 30, heavy : 0, selected : false, dmgtype : 'single', hasBackpack: 0, name: 'Laser Cannon', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Laser Cannon.svg', category: 'engineering-bay' },
+		{ botvalue: 70, bugvalue: 30, heavy : 0, selected : false, dmgtype : 'single', hasBackpack: 0, name: 'Laser Cannon', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Laser Cannon.svg', category: 'engineering-bay' },
 		{ botvalue: 80, bugvalue: 90, heavy : 1, selected : false, dmgtype : 'single', hasBackpack: 0, name: 'Quasar Cannon', type: 'Weapon', enabled: true, imgSrc: 'assets/Engineering Bay/Quasar Cannon.svg', category: 'engineering-bay' },
 		{ botvalue: 85, bugvalue: 90, heavy : 0, selected : false, dmgtype : 'none', name: 'Shield Generator Pack', type: 'Backpack', enabled: true, imgSrc: 'assets/Engineering Bay/Shield Generator Pack.svg', category: 'engineering-bay' },
 		{ botvalue: 80, bugvalue: 65, heavy : 0, selected : false, dmgtype : 'none', name: 'Supply Pack', type: 'Backpack', enabled: true, imgSrc: 'assets/Engineering Bay/Supply Pack.svg', category: 'engineering-bay' },
-		{ botvalue: 75, bugvalue: 55, heavy : 1, selected : false, dmgtype : 'single', name: 'Eagle 110MM Rocket Pods', type: 'Hangar', enabled: true, imgSrc: 'assets/Hangar/Eagle 110MM Rocket Pods.svg', category: 'hangar' },
+		{ botvalue: 70, bugvalue: 55, heavy : 1, selected : false, dmgtype : 'single', name: 'Eagle 110MM Rocket Pods', type: 'Hangar', enabled: true, imgSrc: 'assets/Hangar/Eagle 110MM Rocket Pods.svg', category: 'hangar' },
 		{ botvalue: 85, bugvalue: 85, heavy : 1, selected : false, dmgtype : 'single', name: 'Eagle 500KG Bomb', type: 'Hangar', enabled: true, imgSrc: 'assets/Hangar/Eagle 500KG Bomb.svg', category: 'hangar' },
 		{ botvalue: 100, bugvalue: 100, heavy : 1, selected : false, dmgtype : 'aoe', name: 'Eagle Airstrike', type: 'Hangar', enabled: true, imgSrc: 'assets/Hangar/Eagle Airstrike.svg', category: 'hangar' },
 		{ botvalue: 50, bugvalue: 70, heavy : 0, selected : false, dmgtype : 'aoe', name: 'Eagle Cluster Bomb', type: 'Hangar', enabled: true, imgSrc: 'assets/Hangar/Eagle Cluster Bomb.svg', category: 'hangar' },
@@ -53,8 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ botvalue: 55, bugvalue: 35, heavy : 0, selected : false, dmgtype : 'single', name: 'Guard Dog', type: 'Backpack', enabled: true, imgSrc: 'assets/Robotics Workshop/Guard Dog.svg', category: 'workshop' },
 		{ botvalue: 0, bugvalue: 5, heavy : 0, selected : false, dmgtype : 'single', name: 'Machine Gun Sentry', type: 'Tower', enabled: false, imgSrc: 'assets/Robotics Workshop/Machine Gun Sentry.svg', category: 'workshop' },
 		{ botvalue: 80, bugvalue: 50, heavy : 0, selected : false, dmgtype : 'aoe', name: 'Mortar Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Mortar Sentry.svg', category: 'workshop' },
-		{ botvalue: 35, bugvalue: 25, heavy : 1, selected : false, dmgtype : 'single', name: 'Patriot Exosuit', type: 'Other', enabled: true, imgSrc: 'assets/Robotics Workshop/Patriot Exosuit.svg', category: 'workshop' },
+		{ botvalue: 35, bugvalue: 25, heavy : 1, selected : false, dmgtype : 'single', name: 'Patriot Exosuit', type: 'Mech', enabled: true, imgSrc: 'assets/Robotics Workshop/Patriot Exosuit.svg', category: 'workshop' },
 		{ botvalue: 30, bugvalue: 30, heavy : 1, selected : false, dmgtype : 'single', name: 'Rocket Sentry', type: 'Tower', enabled: true, imgSrc: 'assets/Robotics Workshop/Rocket Sentry.svg', category: 'workshop' },
+		{ botvalue: 65, bugvalue: 35, heavy : 1, selected : false, dmgtype : 'single', name: 'Emancipator Exosuit', type: 'Mech', enabled: true, imgSrc: 'assets/Robotics Workshop/Emancipator Exosuit.svg', category: 'workshop' },
     ];
     
 
@@ -176,6 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 remainingStratagems = remainingStratagems.filter(s => s.type !== 'Backpack');
             }
             
+            //only one Mech allowed
+            let mechCount = loadout.filter(s => s.type === 'Mech').length;
+            if (mechCount >= 1){
+                remainingStratagems = remainingStratagems.filter(s => s.type !== 'Mech');
+            }
+            
             if (guaranteedWeapon) {
                 const weapons = remainingStratagems.filter(s => s.type === 'Weapon');
                 if (weapons.length > 0) {
@@ -207,6 +214,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     remainingStratagems = remainingStratagems.filter(s => s.type !== 'Weapon');
                 } else if (strat.type === 'Backpack' && backpackCount >= maxBackpacks) {
                     remainingStratagems = remainingStratagems.filter(s => s.type !== 'Backpack');
+                } else if (strat.type === 'Mech') {
+                    loadout.push(strat);
+                    remainingStratagems = remainingStratagems.filter(s => s.type !== 'Mech');
                 } else {
                     loadout.push(strat);
                     remainingStratagems.splice(randomIndex, 1);
